@@ -1,0 +1,160 @@
+/* Login.css */
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: relative;
+    width: 10px;
+    height: 100vh;
+    overflow: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px;
+}
+.main_outter{
+    width: 100%;
+    background-color: blue;
+    height: 100vh;
+    overflow: hidden;
+}
+video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signInClass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+}
+.signInClass h1{
+    color: white;
+}
+
+input{
+    text-align: center;
+}
+.signInClass p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.text_cont{
+    width: 100%;
+    z-index: 1;
+    color: white;
+}
+
+.signInClass input {
+    border: 1px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+    background-color: white;
+    /* Set the background color to white */
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    /* Change to column to stack the buttons vertically */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button{
+    width: 300px;
+}
+.signInClass button {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.signInClass button.signIn {
+    background-color: #DDE6ED;
+    /* Orange color */
+}
+
+.signInClass button.signIn:hover {
+    background-color: #9DB2BF;
+    transition: background-color 0.3s ease;
+}
+
+.signInClass button.signUp {
+    background-color: #DDE6ED;
+    /* Orange color */
+}
+
+.signInClass button.signUp:hover {
+    background-color: #9DB2BF;
+    transition: background-color 0.3s ease;
+}
+
+.signInClass button.reset {
+    background-color: #002E2C;
+}
+
+.signInClass button.signInGoogle {
+    background-color: #DDE6ED;
+
+    /* Light blue color */
+    border-radius: 10px;
+}
+
+.signInClass button.signInGoogle:hover {
+    background-color: #9DB2BF;
+    transition: background-color 0.3s ease;
+
+}
+
+@media (max-width: 767px) {
+    /* Media query for mobile screens */
+    .text_cont{
+        opacity: 0;
+        display: inline;
+    }
+    .signInClass{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+
+    }
+  }
+.orSeparator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.orSeparator::before,
+.orSeparator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid black;
+}
+
+.orSeparator::before {
+    margin-right: 10px;
+}
+
+.orSeparator::after {
+    margin-left: 10px;
+}

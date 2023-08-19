@@ -1,0 +1,12 @@
+.outter-contact{
+    background-color: black;
+    height: 50vh;
+    color: white;
+
+}
+.contact-heading{
+    font-size: 20px;
+}
+.contact-ul li{
+    list-style: none;
+}

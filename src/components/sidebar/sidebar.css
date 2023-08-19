@@ -1,0 +1,22 @@
+.outter-sidebar {
+    width: 120px;
+    height: 200vh;
+    background-color: black;
+    z-index: 29;
+    right: 0;
+    transform: translateX(120px);
+    position: fixed;
+    transition: 0.3s ease-out;
+    padding-top: 150px;
+}
+.sidebar-ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.outter-sidebar.shifted {
+    transform: translateX(0px);
+}
+li{
+    margin-bottom: 30px;
+}
