@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import home from '../../home/home';
 import back_video from '../../login_video.mp4';
 import './login.css';
-import { handleLogout } from './logout'; 
+import { handleLogout } from './logout';
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -72,8 +72,8 @@ export const Login = () => {
             <video autoPlay muted loop src={back_video}></video>
             <div className='container'>
                 <div className="text_cont">
-                    <h1>"Elevate Your Eats: Navigate Cafeterias, Crowd-Free"</h1>
-                    <h1>- CROWD-BOSS</h1>
+                    <h1>"Unveiling Café Chronicles: Your Campus, Your Culinary Quests"</h1>
+                    <h1 style={{ position: "absolute", marginLeft: 160 }}>CafeQ</h1>
                 </div>
                 <div className='signInClass'>
                     <h1>Welcome Back!</h1>
