@@ -3,6 +3,7 @@ import { signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { useState, useEffect } from 'react';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import home from '../../home/home';
 import back_video from '../../login_video.mp4';
@@ -15,10 +16,15 @@ export const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [shouldResetForm, setShouldResetForm] = useState(true);
-
+    useEffect(() => {
+        // Reset the state values when the component is mounted
+        setEmail('');
+        setPassword('');
+        setError('');
+    }, []);
     const handleLogoutClick = () => {
         alert("st");
-        handleLogout(() => navigate('/')); // Pass navigate function as callback
+        handleLogout(() => navigate('/'));
     };
 
     const handleEmailAndPasswordLogin = async () => {
@@ -26,7 +32,7 @@ export const Login = () => {
             await signInWithEmailAndPassword(auth, email, password);
             navigate('home');
         } catch (error) {
-            setError('Error logging in');
+            alert('Error logging in');
         }
     };
 
@@ -35,7 +41,7 @@ export const Login = () => {
             await createUserWithEmailAndPassword(auth, email, password);
             navigate('home');
         } catch (error) {
-            setError('Error signing up');
+            alert('Error signing up');
         }
     };
 
@@ -45,9 +51,9 @@ export const Login = () => {
             navigate('home');
         } catch (error) {
             if (error === "auth/popup-closed-by-user") {
-                setError('Sign-in popup closed by user.');
+                alert('Sign-in popup closed by user.');
             } else {
-                setError('Error signing in');
+                alert('Error signing in');
             }
         }
     };
