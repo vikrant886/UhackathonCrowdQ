@@ -6,6 +6,8 @@ import { getFirestore } from 'firebase/firestore'
 import { getStorage } from "firebase/storage";
 import { isExportDeclaration } from "typescript";
 
+// this is working
+
 const firebaseConfig = {
   apiKey: "AIzaSyAphJJN2v0lPoCHiCqOsM2nEQpBaZ0-IPQ",
   authDomain: "crowd-detection-4a9f3.firebaseapp.com",
